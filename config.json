@@ -40,6 +40,14 @@
       }
     },
     {
+      "type":  "text",
+      "action": "add",
+      "args": {
+        "name": "ru-whilelist",
+        "uri": "https://raw.githubusercontent.com/hxehex/russia-mobile-internet-whitelist/refs/heads/main/cidrwhitelist.txt"
+      }
+    },
+    {
       "type": "maxmindGeoLite2ASNCSV",
       "action": "add",
       "args": {
@@ -100,7 +108,7 @@
       "args": {
         "outputDir": "./output",
         "outputName": "geoip-ru-only.dat",
-        "wantedList": ["ru-blocked", "ru-blocked-community", "re-filter", "private"]
+        "wantedList": ["ru-blocked", "ru-blocked-community", "re-filter", "private", "ru-whitelist"]
       }
     },
     {
@@ -109,7 +117,7 @@
       "args": {
         "outputDir": "./output",
         "oneFilePerList": true,
-        "wantedList": ["ru-blocked", "ru-blocked-community", "re-filter", "private"]
+        "wantedList": ["ru-blocked", "ru-blocked-community", "re-filter", "private", "ru-whitelist"]
       }
     },
     {
@@ -128,6 +136,7 @@
         "overwriteList": [
           "ru-blocked",
           "ru-blocked-community",
+          "ru-whitelist",
           "private",
           "cloudflare",
           "cloudfront",
@@ -168,7 +177,7 @@
       "args": {
         "outputDir": "./output",
         "outputName": "Country-ru-only.mmdb",
-        "wantedList": ["ru-blocked", "ru-blocked-community", "re-filter", "private"]
+        "wantedList": ["ru-blocked", "ru-blocked-community", "re-filter", "private", "ru-whitelist"]
       }
     },
     {
